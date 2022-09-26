@@ -1,0 +1,158 @@
+:root {
+    --main-margin: 0 .5rem;
+    --main-margin-tb: 1rem 0;
+    --main-margin-footer: 2rem 5rem;
+    --main-color: white;
+    --main-card-padding: .3rem 0;
+    --main-box-padding: 1rem;
+    --main-background: #77B28C/*#C2C5BB;*/
+    ;
+    --box-color: #157A6E;
+    --card-color: #499F68;
+    --btn-color: #b4654a;
+    --input-color: #c2c5bb;
+    --text-color: #075f55;
+}
+
+html,
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-color: var(--main-background);
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+
+/**Gestion du main*/
+
+.main-content {
+    margin: var(--main-margin);
+}
+
+
+/*
+Gestion de la partie header du projet
+*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--main-margin-tb);
+    /* border: solid .1rem black; */
+    padding: var(--main-box-padding);
+    background-color: var(--card-color);
+    border-radius: 10px;
+}
+
+.header_paragraphe {
+    margin: .5rem 0;
+}
+
+
+/* gestion de la partie decoupage */
+
+.section-decoupage {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/**Gestion de la partie formulaire*/
+
+.form {
+    margin: var(--main-margin-tb);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.form div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background-color: var(--input-color);
+    padding: .3rem;
+    border: .1rem solid var(--box-color);
+    border-radius: .3rem;
+    margin: .2rem 0;
+    color: var(--text-color);
+    width: 90%;
+    height: 100%;
+}
+
+input:focus {
+    outline: var(--box-color) solid 1px;
+}
+
+.form div label {
+    width: 100%;
+}
+
+.form-modification {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/**Gestion de la partie découpage des besoins du mois*/
+
+.decoupage_besoins {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2rem;
+    margin: var(--main-margin-tb);
+}
+
+.besoins_items {
+    margin: .5rem 0;
+}
+
+.divContainerText {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerBtnEdition {
+    position: absolute;
+    display: flex;
+    right: -2.5rem;
+    column-gap: .3rem;
+    padding: .6rem .5rem;
+    background-color: var(--box-color);
+    border-radius: 0 5px 5px 0;
+    border: 1px solid var(--card-color);
+    display: none;
+}
+
+.containerBtnEdition i {
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+/**Gestion du footer*/
+
+.footer {
+    margin: var(--main-margin-footer);
+}
+
+p {
+    margin: .3rem 0;
+}
+
+@media screen and (max-width: 900px) {
+    .decoupage_besoins {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "gestion-argent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0"
+  }
+}

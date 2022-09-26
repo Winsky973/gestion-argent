@@ -1,0 +1,39 @@
+/** Classes générique */
+
+.box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    padding: var(--main-box-padding);
+    /* border: solid .1rem; */
+    border-radius: .5rem;
+    background-color: var(--box-color);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--main-card-padding);
+    /* border: solid .1rem black; */
+    border-radius: .5rem;
+    padding: .5rem;
+    background-color: var(--card-color);
+}
+
+.btn_content {
+    display: flex;
+    row-gap: .5rem;
+    /*justify-content: flex-end;*/
+}
+
+.btn {
+    border-style: none;
+    border: .1rem solid rgb(83, 80, 80);
+    border-radius: .18rem;
+    background-color: var(--btn-color);
+    border: none;
+    padding: .4rem 1rem;
+    cursor: pointer;
+}

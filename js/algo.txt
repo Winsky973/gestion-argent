@@ -1,0 +1,17 @@
+local storage
+
+argent [
+    
+]
+
+argent [
+    argent_mois : {1000}, 
+    besoins : {500},
+    desirs : {300},
+    epargne : {200},  
+    forfaits : {forfaitTelSteven : , forfaitTelWinsky : , weezzy : , }, 
+    dépenses : [
+                {clé1 : valeur1, clé2 : valeur2 }, 
+                {clé1 : valeur1, clé2 : valeur2 }, 
+        ]
+]
