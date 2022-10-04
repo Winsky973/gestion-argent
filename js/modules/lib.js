@@ -68,3 +68,8 @@ export const calculerReste = (key) => {
     }
     return { reste, 'depenses': totalDepense };
 }
+
+/**Retourne le nombre de jours du mois */
+export const numberOfdays = (annee, mois) => {
+    return new Date(annee, mois, 0).getDate();
+}
