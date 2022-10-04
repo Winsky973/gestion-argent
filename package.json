@@ -6,5 +6,21 @@
     "dependencies": {
         "babel": "^6.23.0",
         "sass": "^1.55.0"
-    }
+    },
+    "description": "Ce projet vise à gérer l'argent du mois de la façon suivante 50% des besoins nécessaires : Factures, courses etc... 30% pour les dépenses au quotidien ou des plaisirs personnels 20% d'épargnes",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prefix": "postcss ./public/css/style.css --use autoprefixer",
+        "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Winsky973/gestion-argent.git"
+    },
+    "author": "",
+    "bugs": {
+        "url": "https://github.com/Winsky973/gestion-argent/issues"
+    },
+    "homepage": "https://github.com/Winsky973/gestion-argent#readme"
 }

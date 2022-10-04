@@ -1,0 +1,17 @@
+/*
+Gestion de la partie header du projet
+*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: $main-margin-tb;
+    padding: $main-box-padding;
+    background-color: $card-color;
+    border-radius: $main-border-radius;
+}
+
+.header_paragraphe {
+    margin: .5rem 0;
+}

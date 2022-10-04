@@ -1,0 +1,14 @@
+.btn_content {
+    display: flex;
+    row-gap: .5rem;
+}
+
+.btn {
+    border-style: none;
+    border: .1rem solid rgb(83, 80, 80);
+    border-radius: .18rem;
+    background-color: $btn-color;
+    border: none;
+    padding: .4rem 1rem;
+    cursor: pointer;
+}

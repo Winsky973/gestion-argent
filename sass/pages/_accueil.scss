@@ -1,0 +1,52 @@
+/* gestion de la partie decoupage */
+
+.section-decoupage {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/**Gestion de la partie découpage des besoins du mois*/
+
+.decoupage_besoins {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2rem;
+    margin: $main-margin-tb;
+}
+
+.besoins_items {
+    margin: .5rem 0;
+}
+
+.divContainerText {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerBtnEdition {
+    position: absolute;
+    display: flex;
+    right: -2.5rem;
+    column-gap: .3rem;
+    padding: inherit;
+    background-color: $box-color;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid $card-color;
+    display: none;
+}
+
+.containerBtnEdition i {
+    padding: 2px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .decoupage_besoins {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}

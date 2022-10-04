@@ -1,0 +1,21 @@
+/** Classes générique */
+
+.box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    padding: $main-box-padding;
+    border-radius: $box-rdius;
+    background-color: $box-color;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $main-card-padding;
+    border-radius: .5rem;
+    padding: .5rem;
+    background-color: $card-color;
+}

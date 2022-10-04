@@ -53,18 +53,20 @@ Gestion de la partie header du projet
 
 /* gestion de la partie decoupage */
 
+
+/* 
 .section-decoupage {
     display: flex;
     flex-direction: column;
-}
+} */
 
 
 /**Gestion de la partie formulaire*/
 
-.form {
+
+/* .form {
     margin: var(--main-margin-tb);
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
 }
@@ -98,7 +100,7 @@ input:focus {
 .form-modification {
     display: flex;
     flex-direction: column;
-}
+} */
 
 
 /**Gestion de la partie découpage des besoins du mois*/
@@ -141,7 +143,8 @@ input:focus {
 
 /**Gestion du footer*/
 
-.footer {
+
+/* .footer {
     display: flex;
     justify-content: center;
     color: var(--input-color);
@@ -149,7 +152,7 @@ input:focus {
     width: 100%;
     padding: .5rem 0;
     background-color: var(--box-color);
-}
+} */
 
 p {
     margin: .3rem 0;

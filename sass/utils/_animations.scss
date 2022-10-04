@@ -1,0 +1,20 @@
+.card:hover .containerBtnEdition {
+    animation: 3s ease-in 1s infinite reverse both paused slidein;
+    display: flex;
+}
+
+.card:hover .divContainerText strong {
+    animation: 3s ease-in 1s infinite reverse both paused slidein-strong;
+}
+
+@keyframes slidein {
+    100% {
+        right: 1rem;
+    }
+}
+
+@keyframes slidein-strong {
+    100% {
+        transform: translateX(-3.9rem);
+    }
+}

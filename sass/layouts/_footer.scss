@@ -1,0 +1,11 @@
+/**Gestion du footer*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: $input-color;
+    height: 5rem;
+    width: 100%;
+    padding: .5rem 0;
+    background-color: $box-color;
+}
