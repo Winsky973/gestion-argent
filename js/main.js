@@ -15,11 +15,20 @@ getArgentUtilisateur.addEventListener('submit', e => {
     let desirs = lib.decoupage(argentUtilisateur, 0.3);
     let epargne = lib.decoupage(argentUtilisateur, 0.2);
 
-    lStorage.setItemToLocalStorage('argent', { besoins, desirs, epargne });
+    lStorage.setItemToLocalStorage('argent', { "argent": argentUtilisateur, besoins, desirs, epargne });
 });
 
 let argentUtilisateurLocalStorage = lStorage.getItemFromLocalStorage(cleLocalStorage);
+document.getElementById('argent_mois').textContent = ` ${argentUtilisateurLocalStorage.argent} €`;
 
 montant_besoin_nescessaire.textContent = Number.parseFloat(argentUtilisateurLocalStorage.besoins).toFixed(2);
 montant_besoins_desirs.textContent = Number.parseFloat(argentUtilisateurLocalStorage.desirs).toFixed(2);
 montant_besoins_epargnes.textContent = Number.parseFloat(argentUtilisateurLocalStorage.epargne).toFixed(2);
+
+function numberOfdays(annee, mois) {
+    return new Date(annee, mois, 0).getDate();
+}
+
+let date = new Date();
+let nbJrsDuMois = numberOfdays(date.getFullYear(), date.getMonth()) + 1;
+document.getElementById('argent_jour').textContent = ` ${Number.parseFloat(argentUtilisateurLocalStorage.argent / nbJrsDuMois).toFixed(2)} €`;

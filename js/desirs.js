@@ -24,7 +24,6 @@ for (const depense of depenseDesirsLocalStorage) {
 let resteDesirs = document.getElementById('reste-desirs');
 let totalDepensesDesirs = document.getElementById('total-depenses-desirs');
 let total = lib.calculerReste(cleLocalStorage);
-console.log(total);
 resteDesirs.textContent = `${ Number.parseFloat(total.reste).toFixed(2)} €`;
 totalDepensesDesirs.textContent = `${ Number.parseFloat(total.depenses).toFixed(2) } €`;
 

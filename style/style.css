@@ -142,7 +142,13 @@ input:focus {
 /**Gestion du footer*/
 
 .footer {
-    margin: var(--main-margin-footer);
+    display: flex;
+    justify-content: center;
+    color: var(--input-color);
+    height: 5rem;
+    width: 100%;
+    padding: .5rem 0;
+    background-color: var(--box-color);
 }
 
 p {
