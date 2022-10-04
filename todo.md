@@ -3,5 +3,5 @@
 -- upload git 
 
 -features
--- diviser le l'argent a utiliser par jour, par semaine
+-- diviser le l'argent a utiliser par jour, par semaine (fait)
 -- faire un system de sauvegarde des données à la fin du mois

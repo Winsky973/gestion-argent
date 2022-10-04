@@ -31,4 +31,6 @@ function numberOfdays(annee, mois) {
 
 let date = new Date();
 let nbJrsDuMois = numberOfdays(date.getFullYear(), date.getMonth()) + 1;
-document.getElementById('argent_jour').textContent = ` ${Number.parseFloat(argentUtilisateurLocalStorage.argent / nbJrsDuMois).toFixed(2)} €`;
+let argentJours = argentUtilisateurLocalStorage.argent / nbJrsDuMois;
+document.getElementById('argent_jour').textContent = ` ${Number.parseFloat(argentJours).toFixed(2)} €`;
+document.getElementById('argent_semaine').textContent = ` ${Number.parseFloat(argentJours * 7).toFixed(2)} €`;
