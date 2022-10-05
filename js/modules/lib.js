@@ -15,7 +15,7 @@ export const decoupage = (argent, pourcentage) => {
         return `ce n'est pas un nombre`;
     }
     return argent * pourcentage;
-}
+};
 
 /**
  * Cette fonction fait la soustraction de deux nombres
@@ -25,7 +25,7 @@ export const decoupage = (argent, pourcentage) => {
  */
 export const soustrationNombre = (a, b) => {
     return parseFloat(a - b);
-}
+};
 
 
 /**
@@ -67,9 +67,24 @@ export const calculerReste = (key) => {
         console.log(`le tableau '${key}' n'est pas iterable il doit etre vide`);
     }
     return { reste, 'depenses': totalDepense };
-}
+};
 
 /**Retourne le nombre de jours du mois */
 export const numberOfdays = (annee, mois) => {
     return new Date(annee, mois, 0).getDate();
-}
+};
+
+
+/**
+ * Vérifie si l'entrée est un nombre
+ * @return bool 
+ */
+export const ifNumber = (value) => {
+    const reg = new RegExp('^[0-9]+$');
+    return reg.test(value);
+};
+
+export const ifString = (value) => {
+    const reg = new RegExp('^[A-Za-z]+$');
+    return reg.test(value);
+};

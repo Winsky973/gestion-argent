@@ -1,7 +1,8 @@
 /*****************
  * LOCAL STORAGE *
  ****************/
-import * as htmlTag from './class.js'
+import * as htmlTag from './class.js';
+import * as lib from './lib.js';
 
 
 /**
@@ -128,10 +129,16 @@ export const modifyItemFromLocalStorage = (key = 'depenses', nodeParent, id) => 
 
     form.addEventListener('submit', e => {
         e.preventDefault();
-        items[indexElementAModifier].titre = form[0].value;
-        items[indexElementAModifier].prix = form[1].value;
+        if (!lib.ifString(form[0].value)) {
+            alert('Ajouter un titre correct');
+        } else if (!lib.ifNumber(form[1].value)) {
+            alert('Ajouter un prix correct');
+        } else {
+            items[indexElementAModifier].titre = form[0].value;
+            items[indexElementAModifier].prix = form[1].value;
 
-        setItemToLocalStorage(key, items);
-        window.location.reload();
+            setItemToLocalStorage(key, items);
+            window.location.reload();
+        }
     })
 }

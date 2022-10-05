@@ -170,6 +170,17 @@ Gestion de la partie header du projet
   margin: 0.5rem 0;
 }
 
+/**Gestion du footer*/
+.footer {
+  display: flex;
+  justify-content: center;
+  color: #c2c5bb;
+  height: 5rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #157A6E;
+}
+
 /**Gestion de la partie formulaire*/
 .form {
   margin: 1rem 0;

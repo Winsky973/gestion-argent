@@ -11,11 +11,15 @@ const getArgentUtilisateur = document.getElementById('form-entrer-argent');
 getArgentUtilisateur.addEventListener('submit', e => {
     const argentUtilisateur = getArgentUtilisateur[0].value;
 
-    let besoins = lib.decoupage(argentUtilisateur, 0.5);
-    let desirs = lib.decoupage(argentUtilisateur, 0.3);
-    let epargne = lib.decoupage(argentUtilisateur, 0.2);
+    if (!lib.ifNumber(argentUtilisateur)) {
+        alert('Veuillez rentrer un nombre correct')
+    } else {
+        let besoins = lib.decoupage(argentUtilisateur, 0.5);
+        let desirs = lib.decoupage(argentUtilisateur, 0.3);
+        let epargne = lib.decoupage(argentUtilisateur, 0.2);
 
-    lStorage.setItemToLocalStorage('argent', { "argent": argentUtilisateur, besoins, desirs, epargne });
+        lStorage.setItemToLocalStorage('argent', { "argent": argentUtilisateur, besoins, desirs, epargne });
+    }
 });
 
 let argentUtilisateurLocalStorage = lStorage.getItemFromLocalStorage(cleLocalStorage);
@@ -24,7 +28,7 @@ let date = new Date();
 let nbJrsDuMois = lib.numberOfdays(date.getFullYear(), date.getMonth()) + 1;
 let argentJours = argentUtilisateurLocalStorage.argent / nbJrsDuMois;
 
-document.getElementById('argent_mois').textContent = ` ${argentUtilisateurLocalStorage.argent} €`;
+document.getElementById('argent_mois').textContent = ` ${Number.parseFloat(argentUtilisateurLocalStorage.argent).toFixed(2)} €`;
 document.getElementById('argent_jour').textContent = ` ${Number.parseFloat(argentJours).toFixed(2)} €`;
 document.getElementById('argent_semaine').textContent = ` ${Number.parseFloat(argentJours * 7).toFixed(2)} €`;
 

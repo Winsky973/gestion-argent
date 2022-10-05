@@ -31,12 +31,13 @@ totalDepensesBesoins.textContent = `${ Number.parseFloat(total.depenses).toFixed
 let btnSupprimer = document.querySelectorAll('.btn-supprimer');
 let btnModifer = document.querySelectorAll('.btn-modifier');
 
-// Ajouter un element dnas le local storage et refresh la page pour l'afficher dans le tableau des desirs
+// Ajouter un element dans le local storage et refresh la page pour l'afficher dans le tableau des desirs
 btnAjouter.addEventListener("click", function(e) {
-    if (typeof valeurAjouterTitre.value !== "string" && isNaN(parseInt(valeurAjouterPrix.value))) {
-        return
+    if (!lib.ifString(valeurAjouterTitre.value)) {
+        alert('Ajouter un titre correct');
+    } else if (!lib.ifNumber(valeurAjouterPrix.value)) {
+        alert('Ajouter un prix correct');
     } else {
-
         let id = Math.floor(Math.random() * 1000);
         lStorage.addItemTolocalStorage(cleLocalStorage, { id, 'prix': valeurAjouterPrix.value, 'titre': valeurAjouterTitre.value });
         window.location.reload();

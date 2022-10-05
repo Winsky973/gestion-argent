@@ -11,8 +11,8 @@ let depenseDesirsLocalStorage = lStorage.getItemFromLocalStorage(cleLocalStorage
  * Variables
  */
 let element = new htmlTag.HtmlTag();
-let valueAjouterTitre = document.getElementById("addTitre");
-let valueAjouterPrix = document.getElementById("addPrice");
+let valeurAjouterTitre = document.getElementById("addTitre");
+let valeurAjouterPrix = document.getElementById("addPrice");
 
 
 /** Ajout des elements pris dans le local storage */
@@ -35,12 +35,13 @@ let btnModifer = document.querySelectorAll('.btn-modifier');
 
 // Ajouter un element dnas le local storage et refresh la page pour l'afficher dans le tableau des desirs
 btnAjouter.addEventListener("click", function(e) {
-    console.log('click');
-    if (typeof valueAjouterTitre.value !== "string" && isNaN(parseInt(valueAjouterPrix.value))) {
-        return
+    if (!lib.ifString(valeurAjouterTitre.value)) {
+        alert('Ajouter un titre correct');
+    } else if (!lib.ifNumber(valeurAjouterPrix.value)) {
+        alert('Ajouter un prix correct');
     } else {
         let id = Math.floor(Math.random() * 1000);
-        lStorage.addItemTolocalStorage(cleLocalStorage, { 'id': id, 'prix': valueAjouterPrix.value, 'titre': valueAjouterTitre.value });
+        lStorage.addItemTolocalStorage(cleLocalStorage, { 'id': id, 'prix': valeurAjouterPrix.value, 'titre': valeurAjouterTitre.value });
         window.location.reload();
     }
 });
