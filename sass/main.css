@@ -240,6 +240,13 @@ input:focus {
   padding: 0.5rem;
   background-color: #499F68;
 }
+.card:hover .divContainerText strong {
+  animation: 3s ease-in 1s infinite reverse both paused slidein-strong;
+}
+.card:hover .containerBtnEdition {
+  animation: 3s ease-in 1s infinite reverse both paused slidein;
+  display: flex;
+}
 
 /* gestion de la partie decoupage */
 .section-decoupage {
@@ -292,21 +299,11 @@ input:focus {
     row-gap: 1rem;
   }
 }
-.card:hover .containerBtnEdition {
-  animation: 3s ease-in 1s infinite reverse both paused slidein;
-  display: flex;
-}
-
-.card:hover .divContainerText strong {
-  animation: 3s ease-in 1s infinite reverse both paused slidein-strong;
-}
-
 @-webkit-keyframes slidein {
   100% {
     right: 1rem;
   }
 }
-
 @keyframes slidein {
   100% {
     right: 1rem;
